@@ -34,7 +34,25 @@
   background: #2a2a2a;
   box-shadow: 0 8px 20px var(--shadow-light);
 }
+.dark-theme p {
+  color: var(--background-gradient-start);
+}
 
+.dark-theme li {
+  color: var(--background-gradient-start);
+}
+
+.dark-theme .extra-skills p {
+  color: var(--background-gradient-start);
+}
+
+.dark-theme .project-card p {
+  color: var(--background-gradient-start);
+}
+
+.dark-theme #contacts p {
+  color: var(--background-gradient-start);
+}
 .dark-theme .project-card:hover,
 .dark-theme .project-card:focus-within {
   box-shadow: 0 16px 35px var(--shadow-dark);
@@ -42,7 +60,7 @@
 
 .dark-theme footer {
   border-top-color: var(--primary-color);
-  color: var(--text-secondary);
+  color: var(--background-gradient-start);
 }
 
 /* Сброс */
