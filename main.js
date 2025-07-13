@@ -6,10 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const htmlElement = document.documentElement;
 
   // Восстановление темы из localStorage, если есть
-  if (localStorage.getItem("theme") === "dark") {
-    htmlElement.classList.add("dark-theme");
-    themeToggle.setAttribute("aria-pressed", "true");
-  }
+  htmlElement.classList.remove("dark-theme");
+  themeToggle.setAttribute("aria-pressed", "false");
+
+  // Переключение темы
+  themeToggle.addEventListener("click", () => {
+    const isDark = htmlElement.classList.toggle("dark-theme");
+    themeToggle.setAttribute("aria-pressed", isDark);
+  });
 
   function toggleMenu() {
     const expanded = burger.getAttribute("aria-expanded") === "true" || false;
@@ -48,12 +52,5 @@ document.addEventListener("DOMContentLoaded", () => {
       links.forEach(link => (link.tabIndex = -1));
       burger.focus();
     }
-  });
-
-  // Переключение темы
-  themeToggle.addEventListener("click", () => {
-    const isDark = htmlElement.classList.toggle("dark-theme");
-    themeToggle.setAttribute("aria-pressed", isDark);
-    localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 });
