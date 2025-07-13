@@ -1,4 +1,4 @@
-/* По умолчанию светлая тема: переменные из :root */
+/*Тёмная тема — через класс */
 .dark-theme {
   --primary-color: #8ab4f8;
   --primary-dark: #aecbfa;
@@ -350,6 +350,12 @@ p {
   user-select: none;
 }
 
+.project-card div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .project-card:hover,
 .project-card:focus-within {
   transform: translateY(-10px);
@@ -380,11 +386,10 @@ p {
   color: var(--text-secondary);
   font-size: 1rem;
   margin-bottom: 10px;
-  flex-grow: 1;
 }
 
 .project-card a {
-  margin-top: 10px;
+  margin-top: auto;
   background: var(--primary-dark);
   color: #fff;
   padding: 12px 24px;
@@ -511,4 +516,3 @@ footer {
 #burger.open .burger-line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-
